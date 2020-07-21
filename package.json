@@ -1,0 +1,46 @@
+{
+  "name": "gitflash",
+  "version": "1.0.0",
+  "description": "This is git BUT knows what you actually want.",
+  "main": "./dist/index.js",
+  "bin": {
+    "gitflash": "./build/index.js"
+  },
+  "scripts": {
+    "start": "tsc && node ./build/index.js",
+    "dev": "concurrently --handle-input --default-input-target 1 \"tsc -w\" \"nodemon ./build/index.js\"",
+    "prebuild": "rm -rf build",
+    "build": "tsc -p ."
+  },
+  "keywords": [
+    "Git",
+    "CLI"
+  ],
+  "author": "Adil Waqar",
+  "license": "ISC",
+  "dependencies": {
+    "@octokit/auth-basic": "^1.4.6",
+    "@octokit/rest": "^18.0.1",
+    "@types/clear": "^0.1.0",
+    "@types/clui": "^0.3.0",
+    "@types/configstore": "^4.0.0",
+    "@types/figlet": "^1.2.0",
+    "@types/inquirer": "^6.5.0",
+    "@types/lodash": "^4.14.157",
+    "chalk": "^4.1.0",
+    "clear": "^0.1.0",
+    "clui": "^0.3.6",
+    "commander": "^5.1.0",
+    "configstore": "^5.0.1",
+    "figlet": "^1.5.0",
+    "inquirer": "^7.3.2",
+    "lodash": "^4.17.19",
+    "minimist": "^1.2.5",
+    "simple-git": "^2.13.2",
+    "touch": "^3.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "typescript": "^3.9.7"
+  }
+}
